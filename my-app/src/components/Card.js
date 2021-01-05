@@ -3,7 +3,7 @@ import React  from "react"
 function Card (props) {
     
     function getInfo(event){
-        console.log(event.target.value)
+        console.log(event.target.id)
     }
     return(
         <div className="card col-sm-2" >
