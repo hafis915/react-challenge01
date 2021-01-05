@@ -1,0 +1,31 @@
+.title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card-container {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+  align-content: space-between;
+}
+.card-container .card {
+  text-align: center;
+  margin-left: 30px;
+  width: 18rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 18rem;
+  height: 16rem;
+
+}
+.card-img-top{
+  width: 50px;
+  margin-bottom: 7px;
+}
+/*# sourceMappingURL=output.css.map */
