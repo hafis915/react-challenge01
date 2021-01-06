@@ -16,20 +16,27 @@ function Detail () {
         <>
         {data.length === 0  ? <h1> Loading.. </h1> : 
         <>
-            <div className="card col-sm-2" >
-            <div className="card-body">
-                <img src={data[0].strTeamBadge} className="card-img-top" alt="..."/>
-                <h5 className="card-title">{data[0].strTeam}</h5>
-                    <ul>   
-                        <li>Tahun berdiri : {data[0].intFormedYear} </li>
-                        <li>Nama stadium : {data[0].strStadium}</li>
-                    </ul>
-                <button 
-                className="btn btn-primary" 
-                onClick = {goToHomePage}
-                >Back</button>
+        <div className = "container-detail">
+            <div className= "detail shadow p-3 mb-5 bg-white rounded">
+                <div>
+                <h1>{data[0].strTeam}</h1>
+                    <img src={data[0].strTeamBadge}></img>
+                </div>
+                <div>
+                    <h4>Description : <p>{data[0].strDescriptionEN}</p></h4>
+                    <h4>Formed Year : {data[0].intFormedYear}</h4>
+                    <h4>Official website : <a href={data[0].strWebsite}>{data[0].strWebsite}</a></h4>
+
+                    <button 
+                    className="btn btn-danger"
+                    onClick = {goToHomePage}
+                    > Back Home</button>
+                </div>
+
             </div>
         </div>
+
+
         </>
 
         }

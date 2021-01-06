@@ -7,7 +7,7 @@ function Card (props) {
         history.push(`detail/${event.target.id}`)
     }
     return(
-        <div className="card col-sm-2" >
+        <div className="card col-sm-2 shadow p-3 mb-5 bg-white rounded" >
         <div className="card-body">
         <img src={props.data.strTeamBadge} className="card-img-top" alt="..."/>
         <h5 className="card-title">{props.data.strTeam}</h5>

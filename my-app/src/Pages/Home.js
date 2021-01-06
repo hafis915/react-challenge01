@@ -16,7 +16,7 @@ function Home() {
         <h1>Loading...</h1> :
         <>
           <div className="title"><h1>La Liga Team Info</h1></div>
-          <div className="card-container row">
+          <div className="card-container row ">
               {data.map( el => {
                 return <Card key = {el.idTeam} data ={el}></Card>
               })}
