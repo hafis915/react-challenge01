@@ -1,9 +1,10 @@
 import React  from "react"
-
+import { useHistory } from "react-router-dom"
 function Card (props) {
-    
+    const history = useHistory()
     function getInfo(event){
         console.log(event.target.id)
+        history.push(`detail/${event.target.id}`)
     }
     return(
         <div className="card col-sm-2" >
