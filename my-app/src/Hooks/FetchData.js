@@ -13,17 +13,15 @@ function useFetchData (url) {
           console.log(loading)
           console.log(data)
           setData(data.teams)
-          // setLoading(false)
+          setLoading(false)
         }
 
         )
         .catch(err =>{
           console.log(err)
         })
-        .finally(
-          setLoading(false)
-        )
-    }, [url,loading])
+
+    }, [url])
 
     return {
         data,
