@@ -6,12 +6,14 @@ function useFetchData (url) {
 
     useEffect(() =>{
         setLoading(true)
+        console.log(loading, "sebelum")
         fetch(url)
         .then(res => res.json())
         .then(data => {
-            //   console.log(data.teams.slice(0,24))
-            setLoading(false)
-            setData(data.teams.slice(0,24))
+          console.log(loading)
+          console.log(data)
+          setData(data.teams)
+          // setLoading(false)
         }
 
         )
@@ -21,7 +23,7 @@ function useFetchData (url) {
         .finally(
           setLoading(false)
         )
-    }, [url])
+    }, [url,loading])
 
     return {
         data,
