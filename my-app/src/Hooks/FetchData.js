@@ -11,7 +11,7 @@ function useFetchData (url) {
         .then(res => res.json())
         .then(data => {
           console.log(loading)
-          console.log(data)
+          console.log(data,"fetchData")
           setData(data.teams)
           setLoading(false)
         }

@@ -3,7 +3,9 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
+.card-body button {
+  margin-bottom: 10px;
+}
 .card-container {
   flex-direction: row;
   display: flex;
@@ -21,7 +23,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   width: 18rem;
-  height: 18rem;
+  height: 20rem;
 
 }
 .card-img-top{
@@ -61,5 +63,6 @@
 }
 .detail button{
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=output.css.map */
