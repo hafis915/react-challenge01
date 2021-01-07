@@ -2,12 +2,11 @@ import React, {useEffect}  from "react"
 import {Link} from "react-router-dom"
 import Card from "../components/Card"
 import useFetchData from "../Hooks/FetchData"
-import {useSelector,useDispatch} from "react-redux"
+import {useDispatch} from "react-redux"
 import {addNewFav} from '../store/action'
 
 function Home() {
   const {data } = useFetchData("https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?s=Soccer&c=Spain")
-  const fav = useSelector(state => state.fav)
   const dispatch = useDispatch()
 
   useEffect(() => {

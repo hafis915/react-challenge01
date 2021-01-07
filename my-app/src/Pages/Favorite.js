@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 
 function Favorite() {
-    const fav = useSelector(state => state.fav)
+    const fav = useSelector(state => state.dataReducer.fav)
 
   return (
     <>

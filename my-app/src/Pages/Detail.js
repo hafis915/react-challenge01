@@ -6,7 +6,7 @@ import {fetchDetail} from "../store/action"
 function Detail () {
     const {clubId} = useParams()
     // const {data} = useFetchData(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${clubId}`)
-    const detail = useSelector(state => state.detail)
+    const detail = useSelector(state => state.dataReducer.detail)
     const dispatch = useDispatch()
     const history = useHistory()
 
