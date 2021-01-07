@@ -1,34 +1,40 @@
-import React  from "react"
+import React , {useEffect} from "react"
 import {useParams} from "react-router-dom"
-import useFetchData from "../Hooks/FetchData"
 import  {useHistory} from "react-router-dom"
-
-
+import {useSelector, useDispatch} from "react-redux"
+import {fetchDetail} from "../store/action"
 function Detail () {
     const {clubId} = useParams()
-    const {data} = useFetchData(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${clubId}`)
+    // const {data} = useFetchData(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${clubId}`)
+    const detail = useSelector(state => state.detail)
+    const dispatch = useDispatch()
     const history = useHistory()
+
+    useEffect(() => {
+        console.log(detail, "detail")
+        dispatch(fetchDetail(clubId))
+    }, [])
 
     function goToHomePage() {
         history.push("/")
     }
     return (
         <>
-        {data.length === 0  ? <h1> Loading.. </h1> : 
+        {detail.length === 0  ? <h1> Loading.. </h1> : 
         <>
         <div className = "container-detail">
             <div className= "detail shadow p-3 mb-5 bg-white rounded">
                 <div>
-                    <h1>{data[0].strTeam}</h1>
+                    <h1>{detail.strTeam}</h1>
                     <img 
-                    src={data[0].strTeamBadge}
+                    src={detail.strTeamBadge}
                     alt = "logo"
                     ></img>
                 </div>
                 <div>
-                    <h4>Description : <p>{data[0].strDescriptionEN}</p></h4>
-                    <h4>Formed Year : {data[0].intFormedYear}</h4>
-                    <h4>Official website : <a href={data[0].strWebsite}>{data[0].strWebsite}</a></h4>
+                    <h4>Description : <p>{detail.strDescriptionEN}</p></h4>
+                    <h4>Formed Year : {detail.intFormedYear}</h4>
+                    <h4>Official website : <a href={detail.strWebsite}>{detail.strWebsite}</a></h4>
 
                     <button 
                     className="btn btn-danger"

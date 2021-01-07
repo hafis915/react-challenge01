@@ -1,8 +1,10 @@
-import { createStore } from "redux"
+import { applyMiddleware, createStore } from "redux"
+import thunk from "redux-thunk"
 
 //preparation
 const initialState = {
-    fav : []
+    fav : [],
+    detail : []
 }
 
 function reducer (state = initialState, action ) {
@@ -12,6 +14,8 @@ function reducer (state = initialState, action ) {
             let newData = state.fav
             newData.push(action.payload)
             return {...state, fav: newData }
+        case "FETCH_DETAIL":
+            return { ...state, detail : action.detail }
     
         default:
             return state
@@ -19,6 +23,6 @@ function reducer (state = initialState, action ) {
     }
 }
 
-const store = createStore(reducer)
+const store = createStore(reducer, applyMiddleware(thunk))
 
 export default store
