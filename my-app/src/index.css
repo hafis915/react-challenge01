@@ -1,0 +1,68 @@
+.title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.card-body button {
+  margin-bottom: 10px;
+}
+.card-container {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: auto;
+  align-content: space-between;
+}
+.card-container .card {
+  text-align: center;
+  margin-left: 30px;
+  width: 18rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 18rem;
+  height: 20rem;
+
+}
+.card-img-top{
+  width: 50px;
+  margin-bottom: 7px;
+}
+.container-detail {
+  display: flex;
+  height: 1000px;
+  align-items: center;
+  justify-content: center;
+
+}
+.detail {
+  display: flex;
+  text-align: center;
+  align-content: center;
+  justify-content: space-around;
+  width: 850px;
+  min-height: 400px;
+  /* margin: auto; */
+
+}
+.detail img{
+  width: 250px;
+  height: 250px;
+  margin-right: 20px;
+}
+.detail h4 {
+  text-align: left;
+}
+
+.detail p {
+  margin-top: 10px;
+  text-align: justify;
+  font-size: medium;
+}
+.detail button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=output.css.map */
